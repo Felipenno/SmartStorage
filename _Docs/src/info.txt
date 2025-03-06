@@ -1,0 +1,229 @@
+https://learn.microsoft.com/pt-br/dotnet/core/tools
+
+dotnet new list
+
+dotnet --list-sdks
+
+
+
+dotnet new webapi -f net8.0 -n SmartStorage.Host -o ./Host/src/SmartStorage.Host
+
+dotnet new classlib -f net8.0 -n SmartStorage.InvAddress.Application -o ./Modules/InventoryAddressing/src/SmartStorage.InvAddress.Application
+dotnet new classlib -f net8.0 -n SmartStorage.InvAddress.Domain -o ./Modules/InventoryAddressing/src/SmartStorage.InvAddress.Domain
+dotnet new classlib -f net8.0 -n SmartStorage.InvAddress.Facade -o ./Modules/InventoryAddressing/src/SmartStorage.InvAddress.Facade
+dotnet new classlib -f net8.0 -n SmartStorage.InvAddress.Infra -o ./Modules/InventoryAddressing/src/SmartStorage.InvAddress.Infra
+dotnet new webapi -f net8.0 -n SmartStorage.InvAddress.WebApi -o ./Modules/InventoryAddressing/src/SmartStorage.InvAddress.WebApi
+dotnet new xunit -f net8.0 -n SmartStorage.InvAddress.UnitTest -o ./Modules/InventoryAddressing/test/SmartStorage.InvAddress.UnitTest
+dotnet new xunit -f net8.0 -n SmartStorage.InvAddress.IntegrationTest -o ./Modules/InventoryAddressing/test/SmartStorage.InvAddress.IntegrationTest
+
+dotnet new classlib -f net8.0 -n SmartStorage.OrderPicking.Application -o ./Modules/OrderPicking/src/SmartStorage.OrderPicking.Application
+dotnet new classlib -f net8.0 -n SmartStorage.OrderPicking.Domain -o ./Modules/OrderPicking/src/SmartStorage.OrderPicking.Domain
+dotnet new classlib -f net8.0 -n SmartStorage.OrderPicking.Infra -o ./Modules/OrderPicking/src/SmartStorage.OrderPicking.Infra
+dotnet new classlib -f net8.0 -n SmartStorage.OrderPicking.Facade -o ./Modules/OrderPicking/src/SmartStorage.OrderPicking.Facade
+dotnet new webapi -f net8.0 -n SmartStorage.OrderPicking.WebApi -o ./Modules/OrderPicking/src/SmartStorage.OrderPicking.WebApi
+dotnet new xunit -f net8.0 -n SmartStorage.OrderPicking.UnitTest -o ./Modules/OrderPicking/test/SmartStorage.OrderPicking.UnitTest
+dotnet new xunit -f net8.0 -n SmartStorage.OrderPicking.IntegrationTest -o ./Modules/OrderPicking/test/SmartStorage.OrderPicking.IntegrationTest
+
+dotnet new classlib -f net8.0 -n SmartStorage.Product.Application -o ./Modules/Product/src/SmartStorage.Product.Application
+dotnet new classlib -f net8.0 -n SmartStorage.Product.Domain -o ./Modules/Product/src/SmartStorage.Product.Domain
+dotnet new classlib -f net8.0 -n SmartStorage.Product.Infra -o ./Modules/Product/src/SmartStorage.Product.Infra
+dotnet new classlib -f net8.0 -n SmartStorage.Product.Facade -o ./Modules/Product/src/SmartStorage.Product.Facade
+dotnet new webapi -f net8.0 -n SmartStorage.Product.WebApi -o ./Modules/Product/src/SmartStorage.Product.WebApi
+dotnet new xunit -f net8.0 -n SmartStorage.Product.UnitTest -o ./Modules/Product/test/SmartStorage.Product.UnitTest
+dotnet new xunit -f net8.0 -n SmartStorage.Product.IntegrationTest -o ./Modules/Product/test/SmartStorage.Product.IntegrationTest
+
+dotnet new classlib -f net8.0 -n SmartStorage.Report.Application -o ./Modules/Report/src/SmartStorage.Report.Application
+dotnet new classlib -f net8.0 -n SmartStorage.Report.Domain -o ./Modules/Report/src/SmartStorage.Report.Domain
+dotnet new classlib -f net8.0 -n SmartStorage.Report.Infra -o ./Modules/Report/src/SmartStorage.Report.Infra
+dotnet new webapi -f net8.0 -n SmartStorage.Report.WebApi -o ./Modules/Report/src/SmartStorage.Report.WebApi
+dotnet new xunit -f net8.0 -n SmartStorage.Report.UnitTest -o ./Modules/Report/test/SmartStorage.Report.UnitTest
+dotnet new xunit -f net8.0 -n SmartStorage.Report.IntegrationTest -o ./Modules/Report/test/SmartStorage.Report.IntegrationTest
+
+dotnet new classlib -f net8.0 -n SmartStorage.Security.Application -o ./Modules/Security/src/SmartStorage.Security.Application
+dotnet new classlib -f net8.0 -n SmartStorage.Security.Domain -o ./Modules/Security/src/SmartStorage.Security.Domain
+dotnet new classlib -f net8.0 -n SmartStorage.Security.Infra -o ./Modules/Security/src/SmartStorage.Security.Infra
+dotnet new classlib -f net8.0 -n SmartStorage.Security.Facade -o ./Modules/Security/src/SmartStorage.Security.Facade
+dotnet new webapi -f net8.0 -n SmartStorage.Security.WebApi -o ./Modules/Security/src/SmartStorage.Security.WebApi
+dotnet new xunit -f net8.0 -n SmartStorage.Security.UnitTest -o ./Modules/Security/test/SmartStorage.Security.UnitTest
+dotnet new xunit -f net8.0 -n SmartStorage.Security.IntegrationTest -o ./Modules/Security/test/SmartStorage.Security.IntegrationTest
+
+dotnet new classlib -f net8.0 -n SmartStorage.User.Application -o ./Modules/User/src/SmartStorage.User.Application
+dotnet new classlib -f net8.0 -n SmartStorage.User.Domain -o ./Modules/User/src/SmartStorage.User.Domain
+dotnet new classlib -f net8.0 -n SmartStorage.User.Infra -o ./Modules/User/src/SmartStorage.User.Infra
+dotnet new classlib -f net8.0 -n SmartStorage.User.Facade -o ./Modules/User/src/SmartStorage.User.Facade
+dotnet new webapi -f net8.0 -n SmartStorage.User.WebApi -o ./Modules/User/src/SmartStorage.User.WebApi
+dotnet new xunit -f net8.0 -n SmartStorage.User.UnitTest -o ./Modules/User/test/SmartStorage.User.UnitTest
+dotnet new xunit -f net8.0 -n SmartStorage.User.IntegrationTest -o ./Modules/User/test/SmartStorage.User.IntegrationTest
+
+dotnet new classlib -f net8.0 -n SmartStorage.Order.Application -o ./Modules/Order/src/SmartStorage.Order.Application
+dotnet new classlib -f net8.0 -n SmartStorage.Order.Domain -o ./Modules/Order/src/SmartStorage.Order.Domain
+dotnet new classlib -f net8.0 -n SmartStorage.Order.Infra -o ./Modules/Order/src/SmartStorage.Order.Infra
+dotnet new classlib -f net8.0 -n SmartStorage.Order.Facade -o ./Modules/Order/src/SmartStorage.Order.Facade
+dotnet new webapi -f net8.0 -n SmartStorage.Order.WebApi -o ./Modules/Order/src/SmartStorage.Order.WebApi
+dotnet new xunit -f net8.0 -n SmartStorage.Order.UnitTest -o ./Modules/Order/test/SmartStorage.Order.UnitTest
+dotnet new xunit -f net8.0 -n SmartStorage.Order.IntegrationTest -o ./Modules/Order/test/SmartStorage.Order.IntegrationTest
+
+
+dotnet new sln -n SmartStorage
+
+dotnet sln SmartStorage.sln add Host\src\SmartStorage.Host\SmartStorage.Host.csproj
+
+dotnet sln SmartStorage.sln add Modules\InventoryAddressing\src\SmartStorage.InvAddress.Application\SmartStorage.InvAddress.Application.csproj 
+dotnet sln SmartStorage.sln add Modules\InventoryAddressing\src\SmartStorage.InvAddress.Domain\SmartStorage.InvAddress.Domain.csproj 
+dotnet sln SmartStorage.sln add Modules\InventoryAddressing\src\SmartStorage.InvAddress.Facade\SmartStorage.InvAddress.Facade.csproj 
+dotnet sln SmartStorage.sln add Modules\InventoryAddressing\src\SmartStorage.InvAddress.Infra\SmartStorage.InvAddress.Infra.csproj 
+dotnet sln SmartStorage.sln add Modules\InventoryAddressing\src\SmartStorage.InvAddress.WebApi\SmartStorage.InvAddress.WebApi.csproj
+dotnet sln SmartStorage.sln add Modules\InventoryAddressing\test\SmartStorage.InvAddress.UnitTest\SmartStorage.InvAddress.UnitTest.csproj 
+dotnet sln SmartStorage.sln add Modules\InventoryAddressing\test\SmartStorage.InvAddress.IntegrationTest\SmartStorage.InvAddress.IntegrationTest.csproj 
+
+dotnet sln SmartStorage.sln add Modules\OrderPicking\src\SmartStorage.OrderPicking.Application\SmartStorage.OrderPicking.Application.csproj 
+dotnet sln SmartStorage.sln add Modules\OrderPicking\src\SmartStorage.OrderPicking.Domain\SmartStorage.OrderPicking.Domain.csproj 
+dotnet sln SmartStorage.sln add Modules\OrderPicking\src\SmartStorage.OrderPicking.Facade\SmartStorage.OrderPicking.Facade.csproj 
+dotnet sln SmartStorage.sln add Modules\OrderPicking\src\SmartStorage.OrderPicking.Infra\SmartStorage.OrderPicking.Infra.csproj 
+dotnet sln SmartStorage.sln add Modules\OrderPicking\src\SmartStorage.OrderPicking.WebApi\SmartStorage.OrderPicking.WebApi.csproj
+dotnet sln SmartStorage.sln add Modules\OrderPicking\test\SmartStorage.OrderPicking.UnitTest\SmartStorage.OrderPicking.UnitTest.csproj 
+dotnet sln SmartStorage.sln add Modules\OrderPicking\test\SmartStorage.OrderPicking.IntegrationTest\SmartStorage.OrderPicking.IntegrationTest.csproj 
+
+dotnet sln SmartStorage.sln add Modules\Product\src\SmartStorage.Product.Application\SmartStorage.Product.Application.csproj 
+dotnet sln SmartStorage.sln add Modules\Product\src\SmartStorage.Product.Domain\SmartStorage.Product.Domain.csproj 
+dotnet sln SmartStorage.sln add Modules\Product\src\SmartStorage.Product.Facade\SmartStorage.Product.Facade.csproj 
+dotnet sln SmartStorage.sln add Modules\Product\src\SmartStorage.Product.Infra\SmartStorage.Product.Infra.csproj 
+dotnet sln SmartStorage.sln add Modules\Product\src\SmartStorage.Product.WebApi\SmartStorage.Product.WebApi.csproj
+dotnet sln SmartStorage.sln add Modules\Product\test\SmartStorage.Product.UnitTest\SmartStorage.Product.UnitTest.csproj 
+dotnet sln SmartStorage.sln add Modules\Product\test\SmartStorage.Product.IntegrationTest\SmartStorage.Product.IntegrationTest.csproj 
+
+dotnet sln SmartStorage.sln add Modules\Report\src\SmartStorage.Report.Application\SmartStorage.Report.Application.csproj 
+dotnet sln SmartStorage.sln add Modules\Report\src\SmartStorage.Report.Domain\SmartStorage.Report.Domain.csproj 
+dotnet sln SmartStorage.sln add Modules\Report\src\SmartStorage.Report.Facade\SmartStorage.Report.Facade.csproj 
+dotnet sln SmartStorage.sln add Modules\Report\src\SmartStorage.Report.Infra\SmartStorage.Report.Infra.csproj 
+dotnet sln SmartStorage.sln add Modules\Report\src\SmartStorage.Report.WebApi\SmartStorage.Report.WebApi.csproj
+dotnet sln SmartStorage.sln add Modules\Report\test\SmartStorage.Report.UnitTest\SmartStorage.Report.UnitTest.csproj 
+dotnet sln SmartStorage.sln add Modules\Report\test\SmartStorage.Report.IntegrationTest\SmartStorage.Report.IntegrationTest.csproj 
+
+dotnet sln SmartStorage.sln add Modules\Security\src\SmartStorage.Security.Application\SmartStorage.Security.Application.csproj 
+dotnet sln SmartStorage.sln add Modules\Security\src\SmartStorage.Security.Domain\SmartStorage.Security.Domain.csproj 
+dotnet sln SmartStorage.sln add Modules\Security\src\SmartStorage.Security.Facade\SmartStorage.Security.Facade.csproj 
+dotnet sln SmartStorage.sln add Modules\Security\src\SmartStorage.Security.Infra\SmartStorage.Security.Infra.csproj 
+dotnet sln SmartStorage.sln add Modules\Security\src\SmartStorage.Security.WebApi\SmartStorage.Security.WebApi.csproj
+dotnet sln SmartStorage.sln add Modules\Security\test\SmartStorage.Security.UnitTest\SmartStorage.Security.UnitTest.csproj 
+dotnet sln SmartStorage.sln add Modules\Security\test\SmartStorage.Security.IntegrationTest\SmartStorage.Security.IntegrationTest.csproj 
+
+dotnet sln SmartStorage.sln add Modules\User\src\SmartStorage.User.Application\SmartStorage.User.Application.csproj 
+dotnet sln SmartStorage.sln add Modules\User\src\SmartStorage.User.Domain\SmartStorage.User.Domain.csproj 
+dotnet sln SmartStorage.sln add Modules\User\src\SmartStorage.User.Facade\SmartStorage.User.Facade.csproj 
+dotnet sln SmartStorage.sln add Modules\User\src\SmartStorage.User.Infra\SmartStorage.User.Infra.csproj 
+dotnet sln SmartStorage.sln add Modules\User\src\SmartStorage.User.WebApi\SmartStorage.User.WebApi.csproj
+dotnet sln SmartStorage.sln add Modules\User\test\SmartStorage.User.UnitTest\SmartStorage.User.UnitTest.csproj 
+dotnet sln SmartStorage.sln add Modules\User\test\SmartStorage.User.IntegrationTest\SmartStorage.User.IntegrationTest.csproj 
+
+dotnet sln SmartStorage.sln add Modules\Order\src\SmartStorage.Order.Application\SmartStorage.Order.Application.csproj 
+dotnet sln SmartStorage.sln add Modules\Order\src\SmartStorage.Order.Domain\SmartStorage.Order.Domain.csproj 
+dotnet sln SmartStorage.sln add Modules\Order\src\SmartStorage.Order.Facade\SmartStorage.Order.Facade.csproj 
+dotnet sln SmartStorage.sln add Modules\Order\src\SmartStorage.Order.Infra\SmartStorage.Order.Infra.csproj 
+dotnet sln SmartStorage.sln add Modules\Order\src\SmartStorage.Order.WebApi\SmartStorage.Order.WebApi.csproj
+dotnet sln SmartStorage.sln add Modules\Order\test\SmartStorage.Order.UnitTest\SmartStorage.Order.UnitTest.csproj 
+dotnet sln SmartStorage.sln add Modules\Order\test\SmartStorage.Order.IntegrationTest\SmartStorage.Order.IntegrationTest.csproj 
+
+
+dotnet new gitignore
+
+dotnet run --project ./SmartStorage/SmartStorage.csproj
+dotnet watch  run --project ./SmartStorage/SmartStorage.csproj
+
+
+---------------------------------------
+
+-----------------------------------------
+
+
+- conceitos gerais
+Apenas textos descritivos dos itens
+
+- Buscar inspirações
+Buscar usabilidades comuns e ideias comuns que usuários costumam usar em sistemas por ai
+
+- Wireframe
+Design/ux de baixa fidelidade do projeto para começar a se ter uma visão geral do app e do fluxo das telas.
+Sem cores, ícones, detalhes etc.
+
+- Fluxos de usuário
+Fluxos de utilização dos usuários pelas telas do sistema com um breve descritivo.
+Podendo ser construído junto com o Wireframe.
+
+- Modelagem de dados
+Realizar uma boa modelagem dos dados trafegados e armazenados no sistema, Banco de dados.
+
+- Segurança e Privacidade
+Criar regras de Segurança e Privacidade
+
+- Identidade visual e prototipagem de alta fidelidade
+Cores, fontes, formar, tamanhos, stylus etc
+
+
+
+Dicas de ferramentas:
+Planejamento
+- Miro
+
+Inspirações
+- Behance
+- Dribbble
+- WebFrame
+- tailwindui
+
+Wireframing
+- Miro
+- Figma
+
+UserFlows
+- PageFlows
+
+- Diagrama Arquitetural C4
+
+
+```mermaid
+```
+
+--------------------------------------------------------------------------------------
+https://angular.dev/tools/cli/setup-local
+
+npm i -g @angular/cli
+
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
+ng new App.SmartStorage
+
+ng lint
+
+ng add @angular/material
+
+ng serve --open
+
+https://material.angular.io/guide/getting-started
+https://material.angular.io/components/categories
+https://material.angular.io/guide/theming
+https://material.angular.io/guide/theming#prebuilt-color-palettes
+
+https://angular.dev/cli/generate
+
+- classe        ng generate cl[name][options]
+- enum          ng generate e[name][options]
+- componente    ng generate c[name][options]
+- diretiva      ng generate d[name][options]
+- guard         ng generate g[name][options]
+- interceptor   ng generate interceptor[name][options]
+- interface     ng generate i[name] [type][options]
+- module        ng generate m[name][options]
+- pipe          ng generate p[name][options]
+- service       ng generate s[name][options]
+
+============ Mapeando caminhos tsconfig.json
+
+tsconfig.json >> compilerOptions
+Adicionar
+
+"paths": {
+    "@UmNome/*": ["./src/app/CAMINHO/*"]
+}
+
+Componentes passam a serem importados com "@UmNome/componente" no lugar de "./src/app/CAMINHO/componente" ou caminho relativo.

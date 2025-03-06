@@ -1,0 +1,6 @@
+@SmartStorage.Order.WebApi_HostAddress = http://localhost:5033
+
+GET {{SmartStorage.Order.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
