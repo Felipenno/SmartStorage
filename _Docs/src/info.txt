@@ -1,10 +1,11 @@
 https://learn.microsoft.com/pt-br/dotnet/core/tools
+https://learn.microsoft.com/pt-br/aspnet/core/fundamentals/best-practices?view=aspnetcore-8.0
 
 dotnet new list
 
 dotnet --list-sdks
 
-
+cd -./Api.SmartStorage
 
 dotnet new webapi -f net8.0 -n SmartStorage.Host -o ./Host/src/SmartStorage.Host
 
@@ -62,6 +63,9 @@ dotnet new classlib -f net8.0 -n SmartStorage.Order.Facade -o ./Modules/Order/sr
 dotnet new webapi -f net8.0 -n SmartStorage.Order.WebApi -o ./Modules/Order/src/SmartStorage.Order.WebApi
 dotnet new xunit -f net8.0 -n SmartStorage.Order.UnitTest -o ./Modules/Order/test/SmartStorage.Order.UnitTest
 dotnet new xunit -f net8.0 -n SmartStorage.Order.IntegrationTest -o ./Modules/Order/test/SmartStorage.Order.IntegrationTest
+
+dotnet new classlib -f net8.0 -n SmartStorage.Shared -o ./Modules/Shared/src/SmartStorage.Shared
+dotnet new classlib -f net8.0 -n SmartStorage.Shared.Test -o ./Modules/Shared/test/SmartStorage.Shared.Test
 
 
 dotnet new sln -n SmartStorage
@@ -122,8 +126,52 @@ dotnet sln SmartStorage.sln add Modules\Order\src\SmartStorage.Order.Facade\Smar
 dotnet sln SmartStorage.sln add Modules\Order\src\SmartStorage.Order.Infra\SmartStorage.Order.Infra.csproj 
 dotnet sln SmartStorage.sln add Modules\Order\src\SmartStorage.Order.WebApi\SmartStorage.Order.WebApi.csproj
 dotnet sln SmartStorage.sln add Modules\Order\test\SmartStorage.Order.UnitTest\SmartStorage.Order.UnitTest.csproj 
-dotnet sln SmartStorage.sln add Modules\Order\test\SmartStorage.Order.IntegrationTest\SmartStorage.Order.IntegrationTest.csproj 
+dotnet sln SmartStorage.sln add Modules\Order\test\SmartStorage.Order.IntegrationTest\SmartStorage.Order.IntegrationTest.csproj
 
+dotnet sln SmartStorage.sln add Modules\Shared\src\SmartStorage.Shared\SmartStorage.Shared.csproj
+dotnet sln SmartStorage.sln add Modules\Shared\test\SmartStorage.Shared.Test\SmartStorage.Shared.Test.csproj
+
+
+
+https://learn.microsoft.com/en-us/ef/core/get-started/overview/install
+https://learn.microsoft.com/en-us/ef/core/providers/?tabs=dotnet-core-cli
+https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL/8.0.11#readme-body-tab
+dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 8.0.11
+
+cd Modules\InventoryAddressing\src\SmartStorage.InvAddress.Infra; dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 8.0.11; dotnet add package Dapper --version 2.1.66;  cd ../../../../
+cd Modules\InventoryAddressing\src\SmartStorage.InvAddress.WebApi; dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 8.0.11; dotnet add package Dapper --version 2.1.66;  cd ../../../../
+cd Modules\InventoryAddressing\test\SmartStorage.InvAddress.UnitTest; dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 8.0.11; dotnet add package Dapper --version 2.1.66;  cd ../../../../
+cd Modules\InventoryAddressing\test\SmartStorage.InvAddress.IntegrationTest; dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 8.0.11; dotnet add package Dapper --version 2.1.66;  cd ../../../../
+
+cd Modules\OrderPicking\src\SmartStorage.OrderPicking.Infra; dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 8.0.11; dotnet add package Dapper --version 2.1.66;  cd ../../../../
+cd Modules\OrderPicking\src\SmartStorage.OrderPicking.WebApi; dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 8.0.11; dotnet add package Dapper --version 2.1.66;  cd ../../../../
+cd Modules\OrderPicking\test\SmartStorage.OrderPicking.UnitTest; dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 8.0.11; dotnet add package Dapper --version 2.1.66;  cd ../../../../
+cd Modules\OrderPicking\test\SmartStorage.OrderPicking.IntegrationTest; dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 8.0.11; dotnet add package Dapper --version 2.1.66;  cd ../../../../
+
+cd Modules\Product\src\SmartStorage.Product.Infra; dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 8.0.11; dotnet add package Dapper --version 2.1.66;  cd ../../../../
+cd Modules\Product\src\SmartStorage.Product.WebApi; dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 8.0.11; dotnet add package Dapper --version 2.1.66;  cd ../../../../
+cd Modules\Product\test\SmartStorage.Product.UnitTest; dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 8.0.11; dotnet add package Dapper --version 2.1.66;  cd ../../../../
+cd Modules\Product\test\SmartStorage.Product.IntegrationTest; dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 8.0.11; dotnet add package Dapper --version 2.1.66;  cd ../../../../
+
+cd Modules\Report\src\SmartStorage.Report.Infra; dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 8.0.11; dotnet add package Dapper --version 2.1.66;  cd ../../../../
+cd Modules\Report\src\SmartStorage.Report.WebApi; dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 8.0.11; dotnet add package Dapper --version 2.1.66;  cd ../../../../
+cd Modules\Report\test\SmartStorage.Report.UnitTest; dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 8.0.11; dotnet add package Dapper --version 2.1.66;  cd ../../../../
+cd Modules\Report\test\SmartStorage.Report.IntegrationTest; dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 8.0.11; dotnet add package Dapper --version 2.1.66;  cd ../../../../
+
+cd Modules\Security\src\SmartStorage.Security.Infra; dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 8.0.11; dotnet add package Dapper --version 2.1.66;  cd ../../../../
+cd Modules\Security\src\SmartStorage.Security.WebApi; dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 8.0.11; dotnet add package Dapper --version 2.1.66;  cd ../../../../
+cd Modules\Security\test\SmartStorage.Security.UnitTest; dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 8.0.11; dotnet add package Dapper --version 2.1.66;  cd ../../../../
+cd Modules\Security\test\SmartStorage.Security.IntegrationTest; dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 8.0.11; dotnet add package Dapper --version 2.1.66;  cd ../../../../
+
+cd Modules\User\src\SmartStorage.User.Infra; dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 8.0.11; dotnet add package Dapper --version 2.1.66;  cd ../../../../
+cd Modules\User\src\SmartStorage.User.WebApi; dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 8.0.11; dotnet add package Dapper --version 2.1.66;  cd ../../../../
+cd Modules\User\test\SmartStorage.User.UnitTest; dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 8.0.11; dotnet add package Dapper --version 2.1.66;  cd ../../../../
+cd Modules\User\test\SmartStorage.User.IntegrationTest; dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 8.0.11; dotnet add package Dapper --version 2.1.66;  cd ../../../../
+
+cd Modules\Order\src\SmartStorage.Order.Infra; dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 8.0.11; dotnet add package Dapper --version 2.1.66;  cd ../../../../
+cd Modules\Order\src\SmartStorage.Order.WebApi; dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 8.0.11; dotnet add package Dapper --version 2.1.66;  cd ../../../../
+cd Modules\Order\test\SmartStorage.Order.UnitTest; dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 8.0.11; dotnet add package Dapper --version 2.1.66;  cd ../../../../
+cd Modules\Order\test\SmartStorage.Order.IntegrationTest; dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 8.0.11; dotnet add package Dapper --version 2.1.66;  cd ../../../../
 
 dotnet new gitignore
 
