@@ -13,10 +13,12 @@
 
   <ItemGroup>
     <Folder Include="Data\Providers\ADO\" />
-    <Folder Include="Data\Providers\EfCore\Config\" />
-    <Folder Include="Data\Providers\EfCore\Repository\" />
     <Folder Include="Data\Providers\Dapper\" />
     <Folder Include="Service\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SmartStorage.Product.Domain\SmartStorage.Product.Domain.csproj" />
   </ItemGroup>
 
 </Project>

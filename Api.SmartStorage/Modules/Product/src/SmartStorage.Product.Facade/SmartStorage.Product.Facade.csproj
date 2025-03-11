@@ -11,4 +11,8 @@
     <Folder Include="Factory\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SmartStorage.Product.Application\SmartStorage.Product.Application.csproj" />
+  </ItemGroup>
+
 </Project>

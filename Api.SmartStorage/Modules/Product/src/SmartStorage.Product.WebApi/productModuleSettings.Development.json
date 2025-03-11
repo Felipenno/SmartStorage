@@ -1,0 +1,13 @@
+{
+  "ConnectionStrings": {
+    "PostgreSQL": "Host=localhost:5432;Username=dev_pg;Password=DBtest1402;Database=DB_SMART_STORAGE"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning",
+      "Microsoft.EntityFrameworkCore.Database.Command": "Information"
+    }
+  },
+  "AllowedHosts": "*"
+}

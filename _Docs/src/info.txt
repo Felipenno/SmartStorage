@@ -1,5 +1,8 @@
 https://learn.microsoft.com/pt-br/dotnet/core/tools
 https://learn.microsoft.com/pt-br/aspnet/core/fundamentals/best-practices?view=aspnetcore-8.0
+https://learn.microsoft.com/en-us/ef/core/get-started/overview/install
+https://learn.microsoft.com/en-us/ef/core/providers/?tabs=dotnet-core-cli
+https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL/8.0.11#readme-body-tab
 
 dotnet new list
 
@@ -133,10 +136,6 @@ dotnet sln SmartStorage.sln add Modules\Shared\test\SmartStorage.Shared.Test\Sma
 
 
 
-https://learn.microsoft.com/en-us/ef/core/get-started/overview/install
-https://learn.microsoft.com/en-us/ef/core/providers/?tabs=dotnet-core-cli
-https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL/8.0.11#readme-body-tab
-dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 8.0.11
 
 cd Modules\InventoryAddressing\src\SmartStorage.InvAddress.Infra; dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 8.0.11; dotnet add package Dapper --version 2.1.66;  cd ../../../../
 cd Modules\InventoryAddressing\src\SmartStorage.InvAddress.WebApi; dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 8.0.11; dotnet add package Dapper --version 2.1.66;  cd ../../../../
@@ -180,6 +179,7 @@ dotnet watch  run --project ./SmartStorage/SmartStorage.csproj
 
 
 ---------------------------------------
+
 
 -----------------------------------------
 
@@ -264,6 +264,20 @@ https://angular.dev/cli/generate
 - module        ng generate m[name][options]
 - pipe          ng generate p[name][options]
 - service       ng generate s[name][options]
+
+ng generate c ./features/home
+
+ng generate c ./features/product/product-home
+ng generate c ./features/product/product-list
+
+ng generate c ./features/user
+ng generate c ./features/user/login
+ng generate c ./features/user/register
+
+ng generate c ./features/security/security-home
+ng generate c ./features/security/User/security-User-list
+ng generate c ./features/security/permissions/security-permissions-list
+ng generate c ./features/security/functionality/security-functionality-list
 
 ============ Mapeando caminhos tsconfig.json
 
