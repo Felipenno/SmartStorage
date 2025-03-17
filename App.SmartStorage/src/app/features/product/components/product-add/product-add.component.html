@@ -1,0 +1,17 @@
+<form [formGroup]="form">
+    <app-input-field [inputType]="inputTypeText" [outline]="true" label="Code" formControlName="code"/>
+    <app-input-field [inputType]="inputTypeText" [outline]="true" label="Name" formControlName="name"/>
+    <app-date-field label="Data início" formControlName="startDate"/>
+    <app-date-field label="Data fim"    formControlName="endDate"/>
+</form>
+
+<div class="btn-group">
+    <button type="button" class="btn-form btn-white" (click)="closeDialog()">
+        <mat-icon fontIcon="block"></mat-icon>
+        Cancelar
+    </button>
+    <button type="button" class="btn-form btn-blue" >
+        <mat-icon fontIcon="check"></mat-icon>
+        Gravar
+    </button>
+</div>

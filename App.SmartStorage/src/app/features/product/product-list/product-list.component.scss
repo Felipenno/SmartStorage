@@ -1,3 +1,14 @@
-:host {
-  display: block;
+table {
+  width: 100%;
+  background-color: rgb(46, 45, 45);
+  border-radius: 8px;
+}
+
+.mat-mdc-row .mat-mdc-cell {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+}
+
+.mat-mdc-row:hover .mat-mdc-cell {
+  border-color: currentColor;
 }

@@ -269,6 +269,8 @@ ng generate c ./features/home
 
 ng generate c ./features/product/product-home
 ng generate c ./features/product/product-list
+ng generate c ./features/product/components/product-add
+ng generate c ./features/product/components/product-edit
 
 ng generate c ./features/user
 ng generate c ./features/user/login
@@ -278,6 +280,27 @@ ng generate c ./features/security/security-home
 ng generate c ./features/security/User/security-User-list
 ng generate c ./features/security/permissions/security-permissions-list
 ng generate c ./features/security/functionality/security-functionality-list
+
+ng generate c ./features/inventory-addressing
+ng generate c ./features/inventory-addressing/inventory-addressing-list
+ng generate c ./features/inventory-addressing/inventory-addressing-map
+ng generate c ./features/inventory-addressing/components/inventory-addressing-floor
+ng generate c ./features/inventory-addressing/components/inventory-addressing-hallway
+ng generate c ./features/inventory-addressing/components/inventory-addressing-side
+ng generate c ./features/inventory-addressing/components/inventory-addressing-shelf
+ng generate c ./features/inventory-addressing/components/inventory-addressing-slot
+
+ng generate c ./features/order-picking
+ng generate c ./features/order-picking/order-picking-list
+
+ng generate c ./shared/components/nav-menu
+
+ng generate c ./shared/components/input-field
+ng generate c ./shared/components/select-field
+ng generate c ./shared/components/date-field
+
+
+
 
 ============ Mapeando caminhos tsconfig.json
 

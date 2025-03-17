@@ -1,0 +1,18 @@
+<div class="input-field-component">
+    <mat-form-field appearance="outline">
+        <mat-select
+            [(value)]="inputValue"
+            (blur)="onTouched && onTouched()"
+            (selectionChange)="onChange && onChange(inputValue)"
+            [disabled]="isDisabled">
+          @for (item of options(); track item.value){
+            <mat-option [value]="item.value">{{ item.viewValue }}</mat-option>
+          }
+        </mat-select>
+        <mat-label>{{ labelInput }}</mat-label>
+    </mat-form-field>
+    @if (getErrorMessage()) {
+      <mat-error>{{ getErrorMessage() }}</mat-error>
+  }
+</div>
+

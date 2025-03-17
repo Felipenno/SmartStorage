@@ -1,1 +1,16 @@
-<p>login works!</p>
+<div class="container-flex-full">
+    <section class="container-flex-half-width">
+        <mat-icon class="icon-size-calc-12" aria-hidden="false" aria-label="warehouse" fontIcon="warehouse"></mat-icon>
+        <h1 class="font-50" >Smart Storage</h1>
+    </section>
+        <form [formGroup]="form" class="container-flex-half-width">
+            <app-input-field [inputType]="inputTypeEmail" class="w-60 mb-15" label="Email" formControlName="email"/>
+            <app-input-field [inputType]="inputTypePassword" class="w-60 mb-15" label="Senha" formControlName="password"/>
+
+            <button type="button" class="w-60" mat-flat-button color="secondary">Entrar</button>
+            <a routerLink="./register" mat-raised-button color="accent">Registrar</a>
+        </form>
+</div>
+    
+
+

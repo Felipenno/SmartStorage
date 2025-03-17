@@ -1,1 +1,71 @@
-<p>register works!</p>
+<div class="container-flex-full">
+    <section class="container-flex-half-width">
+        <mat-icon class="icon-size-calc-12" aria-hidden="false" aria-label="warehouse" fontIcon="warehouse"></mat-icon>
+        <h1 class="font-50" >Smart Storage</h1>
+    </section>
+        <form [formGroup]="form" class="container-flex-half-width">
+            <mat-form-field class="width-60">
+                <mat-label>Nome</mat-label>
+                <input matInput placeholder="Nome" formControlName="name" >
+                @if (form.controls['name'].hasError('required')) {
+                    <mat-error>Campo obrigatório</mat-error>
+                }
+                @else if(form.controls['name'].hasError('minlength')) {
+                    <mat-error>Mínimo de 5 caracteres</mat-error>
+                }
+                @else if(form.controls['name'].hasError('maxlength')) {
+                    <mat-error>Máximo de 100 caracteres</mat-error>
+                }
+            </mat-form-field>
+            <mat-form-field class="width-60">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Email" formControlName="email">
+                @if (form.controls['email'].hasError('required')) {
+                    <mat-error>Campo obrigatório</mat-error>
+                }
+                @else if(form.controls['email'].hasError('minlength')) {
+                    <mat-error>Mínimo de 5 caracteres</mat-error>
+                }
+                @else if(form.controls['email'].hasError('maxlength')) {
+                    <mat-error>Máximo de 100 caracteres</mat-error>
+                }
+                @else if(form.controls['email'].hasError('email')) {
+                    <mat-error>Email inválido</mat-error>
+                }
+            </mat-form-field>
+            <mat-form-field class="width-60">
+                <mat-label>Senha</mat-label>
+                <input matInput type="password" placeholder="Senha" formControlName="password" >
+                @if (form.controls['password'].hasError('required')) {
+                    <mat-error>Campo obrigatório</mat-error>
+                }
+                @else if(form.controls['password'].hasError('minlength')) {
+                    <mat-error>Mínimo de 5 caracteres</mat-error>
+                }
+                @else if(form.controls['password'].hasError('maxlength')) {
+                    <mat-error>Máximo de 100 caracteres</mat-error>
+                }
+                @else if(form.controls['password'].hasError('email')) {
+                    <mat-error>Email inválido</mat-error>
+                }
+            </mat-form-field>
+            <mat-form-field class="width-60">
+                <mat-label>Repetir Senha</mat-label>
+                <input matInput type="password" placeholder="Repetir Senha" formControlName="password_same">
+                @if (form.controls['password_same'].hasError('required')) {
+                    <mat-error>Campo obrigatório</mat-error>
+                }
+                @else if(form.controls['password_same'].hasError('minlength')) {
+                    <mat-error>Mínimo de 5 caracteres</mat-error>
+                }
+                @else if(form.controls['password_same'].hasError('maxlength')) {
+                    <mat-error>Máximo de 100 caracteres</mat-error>
+                }
+            </mat-form-field>
+            <button type="button" class="width-60" mat-flat-button color="secondary">Registrar-se</button>
+            <a routerLink="/user" mat-raised-button color="accent">Entrar</a>
+        </form>
+</div>
+    
+
+

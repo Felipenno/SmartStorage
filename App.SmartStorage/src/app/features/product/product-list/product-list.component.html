@@ -1,1 +1,57 @@
-<p>product-list works!</p>
+<div class="filters-container">
+  <form [formGroup]="form" class="container-flex-no-wrap-inputs">
+    <app-input-field [inputType]="inputTypeNumber" [outline]="true" class="w-33" label="Id" formControlName="id"/>
+    <app-input-field [inputType]="inputTypeText" [outline]="true" label="Code" formControlName="code"/>
+    <app-input-field [inputType]="inputTypeText" [outline]="true" label="Name" formControlName="name"/>
+    <app-select-field label="Status" [options]="selectOptions" formControlName="status" />
+  </form>
+  
+  <div class="btn-group">
+    <button type="button" class="btn-form btn-white" (click)="search()">
+      <mat-icon aria-hidden="false" aria-label="search product" fontIcon="search"></mat-icon>
+      Buscar
+    </button>
+    <button type="button" class="btn-form btn-blue" (click)="newProduct()">
+      <mat-icon aria-hidden="false" aria-label="add product" fontIcon="add"></mat-icon>
+      Adicionar produto
+    </button>
+  </div>
+</div>
+
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> Id </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="code">
+      <th mat-header-cell *matHeaderCellDef> Código </th>
+      <td mat-cell *matCellDef="let element"> {{element.code}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Nome </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="active">
+      <th mat-header-cell *matHeaderCellDef> Ativo </th>
+      <td mat-cell *matCellDef="let element"> {{element.active}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="edit">
+      <th mat-header-cell *matHeaderCellDef> Editar </th>
+      <td mat-cell *matCellDef="let element">
+        <button class="btn-icon" (click)="editProduct(element.id)">
+          <mat-icon aria-hidden="false" aria-label="edit icon" fontIcon="edit" matTooltip="Editar" matTooltipPosition="right"></mat-icon>
+        </button>
+      </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>

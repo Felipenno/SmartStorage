@@ -1,0 +1,22 @@
+.sidebar-menu {
+  background-color: rgb(46, 45, 45);
+  width: 60px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  nav{
+    mat-list mat-list-item .router-link-active{
+        background-color: rgb(46, 45, 45);
+        color: rgb(120, 120, 231);
+    }
+    
+    mat-list-item{
+      a {
+        font-style: normal;
+        color: white;
+      }
+    }
+  }
+}

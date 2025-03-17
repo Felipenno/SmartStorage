@@ -1,0 +1,25 @@
+<div class="input-field-component">
+    <mat-form-field [class.outline]="outline()" [appearance]="outline() ? 'outline' : 'fill'">
+        <mat-label>{{ labelInput }}</mat-label>
+        <input matInput [type]="inputType() === 'password' ? hidePassword() ? 'password' : 'text' : inputType() "
+            [(ngModel)]="inputValue" 
+            (blur)="onTouched && onTouched()"
+            (change)="onChange && onChange(inputValue)"
+            [disabled]="isDisabled"
+        />
+        @if(inputType() === 'password'){
+            <button
+                mat-icon-button
+                matSuffix
+                (click)="changePasswordVisibility($event)"
+                [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hidePassword()"
+            >
+                <mat-icon>{{ hidePassword() ? 'visibility_off' : 'visibility' }}</mat-icon>
+            </button>
+        }
+    </mat-form-field>
+    @if (getErrorMessage()) {
+        <mat-error>{{ getErrorMessage() }}</mat-error>
+    }
+</div>

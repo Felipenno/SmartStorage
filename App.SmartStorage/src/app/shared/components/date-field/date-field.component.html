@@ -1,0 +1,17 @@
+<div class="input-field-component">
+    <mat-form-field>
+        <mat-label> {{ labelInput }} </mat-label>
+        <input matInput [matDatepicker]="picker"
+            [(ngModel)]="inputValue" 
+            (blur)="onTouched && onTouched()"
+            (change)="onChange && onChange(inputValue)"
+            [disabled]="isDisabled"
+        />
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    @if (getErrorMessage()) {
+        <mat-error>{{ getErrorMessage() }}</mat-error>
+    }
+</div>

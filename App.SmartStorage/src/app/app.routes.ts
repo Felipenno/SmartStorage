@@ -21,5 +21,13 @@ export const routes: Routes = [
     {
         path: 'product',
         loadChildren: () => import('./features/product/product-home/product-home.routes').then(m => m.productRoutes)
+    },
+    {
+        path: 'order-picking',
+        loadChildren: () => import('./features/order-picking/order-picking.routes').then(m => m.orderPicking)
+    },
+    {
+        path: 'inventory-addressing',
+        loadChildren: () => import('./features/inventory-addressing/inventory-addressing.routes').then(m => m.inventoryAddressing)
     }
 ];
