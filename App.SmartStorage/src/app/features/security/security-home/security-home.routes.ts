@@ -10,7 +10,10 @@ export const securityRoutes: Routes = [
         component: SecurityHomeComponent,
         children: [
             {
-                path: '', component: SecurityUserListComponent, pathMatch: 'full'
+                path: '', redirectTo: 'user', pathMatch: 'full'
+            },
+            {
+                path: 'user', component: SecurityUserListComponent, pathMatch: 'full'
             },
             {
                 path: 'permission', component: SecurityPermissionsListComponent, pathMatch: 'full'

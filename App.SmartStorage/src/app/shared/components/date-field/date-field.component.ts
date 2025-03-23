@@ -30,7 +30,7 @@ export class DateFieldComponent implements ControlValueAccessor, OnInit  {
 
   protected onTouched?: () => object;
   protected onChange?: (value:unknown) => void;
-  protected inputValue:unknown = '';
+  protected inputValue:unknown;
   protected isDisabled = false;
   protected labelInput = '';
   

@@ -18,7 +18,7 @@ import { SelectInputOnsModel } from '@shared/models/select-options-model';
 })
 export class SelectFieldComponent implements ControlValueAccessor, OnInit{
 
-  protected ngControl = inject(NgControl, {optional: true});
+    protected ngControl = inject(NgControl, {optional: true});
   
     label = input('');
     options = input.required<SelectInputOnsModel[]>();

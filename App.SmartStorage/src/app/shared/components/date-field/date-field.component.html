@@ -4,7 +4,7 @@
         <input matInput [matDatepicker]="picker"
             [(ngModel)]="inputValue" 
             (blur)="onTouched && onTouched()"
-            (change)="onChange && onChange(inputValue)"
+            (dateChange)="onChange && onChange(inputValue)"
             [disabled]="isDisabled"
         />
         <mat-hint>MM/DD/YYYY</mat-hint>

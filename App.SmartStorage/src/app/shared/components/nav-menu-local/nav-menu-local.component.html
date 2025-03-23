@@ -1,0 +1,13 @@
+<nav>
+
+        @for(r of menuOptions(); track r.route){
+            <a  [routerLink]="r.route" routerLinkActive="router-link-active"
+                [matTooltip]="r.tooltip" 
+                matTooltipPosition="below"
+            >
+                <mat-icon [fontIcon]="r.icon" ></mat-icon>
+                {{r.title}}
+            </a>
+        }
+    
+</nav>

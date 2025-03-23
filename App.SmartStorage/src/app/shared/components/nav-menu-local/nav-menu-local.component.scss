@@ -1,0 +1,58 @@
+:host {
+  display: block;
+  background-color: rgb(46, 45, 45);
+  padding: 10px;
+
+  nav {
+    font-style: normal;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    gap: 15px;
+    display: flex;
+
+    justify-content: flex-start;
+    align-items: center;
+
+    a.router-link-active{
+      background-color: rgb(46, 45, 45);
+      color: rgb(145, 145, 255);
+    }
+
+    a{
+      font-style: normal;
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+    }
+  } 
+}
+
+
+.sidebar-menu {
+  background-color: rgb(46, 45, 45);
+  width: 60px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  nav{
+    mat-list mat-list-item .router-link-active{
+        background-color: rgb(46, 45, 45);
+        color: rgb(120, 120, 231);
+    }
+    
+    mat-list-item{
+      a {
+        font-style: normal;
+        color: white;
+      }
+    }
+  }
+}

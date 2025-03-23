@@ -199,5 +199,62 @@ div.input-field-component {
     max-width: 800px;
     border-radius: 0;
   }
+}
+
+.full-screen-absolute{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bg-backdrop{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.loading-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.5);
+
+  overflow: hidden;
+  z-index: 9999;
+
+  .loading-global{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+  }
+
+}
+
+.mat-mdc-snack-bar-container .mdc-snackbar__surface {
+  background-color: transparent !important;
   
+
+  .mdc-snackbar__label{
+    font-weight: 500;
+    font-size: 16px;
+  }
+}
+
+.snackbar-success {
+  background-color: #51a351
+}
+
+.snackbar-info {
+  background-color: #2f96b4
+}
+
+.snackbar-fail {
+  background-color: #bd362f 
+}
+
+.snackbar-warning {
+  background-color: #f89406
 }
